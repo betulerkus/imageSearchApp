@@ -6,11 +6,16 @@ const form = document.querySelector("#form");
 
 
 form.addEventListener("submit", getImagesFunc);
+// form.addEventListener("submit", go);
 clearButton.addEventListener("click", removeResultsFunc)
 
-function getImagesFunc(e){
+
+
+
+
+function getImagesFunc(){
     let keyWord=inputKeyword.value.trim();
-    imgWrapper.innerHTML="";
+    // imgWrapper.innerHTML="";
         fetch(`https://api.unsplash.com/search/photos?query=${keyWord}`,{
         method: "GET",
         headers: {
@@ -24,9 +29,6 @@ function getImagesFunc(e){
         })
      })
     .catch((err)=>console.log(err))
-    
-
-    e.preventDefault();
 }
 
 function checkResultsFunc(){
