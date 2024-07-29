@@ -25,7 +25,6 @@ function getImagesFunc(e){
      })
     .catch((err)=>console.log(err))
     
-
     e.preventDefault();
 }
 
@@ -39,32 +38,26 @@ function checkResultsFunc(){
 }
 
 function addImageToUI(url){
-    const imgCard = document.createElement("div");
-    imgCard.className ="col";
     const imgDiv = document.createElement("div");
-    imgDiv.style.boxShadow = "0px 0px 20px black"
+    imgDiv.style.boxShadow = "0px 0px 10px black"
     const img =document.createElement("img");
     img.setAttribute("src", url);
     img.style.objectFit="cover";
-    img.height = "275";
+    img.style.height = "100%";
     img.style.width = "100%";
 
-    imgWrapper.appendChild(imgCard);
-    imgCard.appendChild(imgDiv).appendChild(img);
+    imgWrapper.appendChild(imgDiv).appendChild(img);
 
     //IMAGE's HTML CODEs
-    /* <div class="col">
-          <div class="shadow-sm">
-            <img src="https://r.resimlink.com/afpmR61DG9AK.png" class=" " style="object-fit: cover" width="100%" height="275" alt="">
-          </div>
+        /*<div class="shadow-sm">
+            <img src="https://r.resimlink.com/afpmR61DG9AK.png" class=" " style="object-fit: cover" width="100%" height="100%" alt="">
         </div>*/
 }
 
 function removeResultsFunc(){
     inputKeyword.value="";
     inputKeyword.focus();
-    while (imgWrapper.firstChild) {
+    while (imgWrapper.firstChild)
+    {
         imgWrapper.removeChild(imgWrapper.firstChild);
-      }
-      
-}
+    }}

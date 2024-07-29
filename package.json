@@ -1,0 +1,9 @@
+{ 
+  "devDependencies": {
+    "tailwindcss": "^3.4.6"
+  },
+  "scripts": {
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./css/style.css --watch" ,
+    "prettier": "npx prettier --write **/*.html"
+  }
+}
